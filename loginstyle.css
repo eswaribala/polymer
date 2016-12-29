@@ -1,0 +1,51 @@
+form
+{
+    width:100%;
+    height:200px;
+
+}
+
+section
+{
+    width:100%;
+    height:50px;
+
+   margin-top: 20%;
+}
+.button
+{
+    background-color: navy;
+    width:100%;
+}
+.label
+{
+    width:100%;
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+}
+.heading
+{
+    font-size: larger;
+    text-align: center;
+}
+
+paper-item
+{
+    float:left;
+    margin-left: 20%;
+
+}
+
+.page
+{
+    border: 2px solid red;
+    width:40%;
+    height:400px;
+    margin-left: 25%;
+    margin-top: 5%;
+}
+fieldset
+{
+    border: 2px solid white;
+}
