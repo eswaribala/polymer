@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+
+    <title>iron-media-query demo</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="lib/webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="lib/paper-styles/demo-pages.html">
+    <link rel="import" href="lib/iron-media-query/iron-media-query.html">
+
+</head>
+<body>
+
+<x-test>This will be green if the query is matched and blue if it's not</x-test>
+
+<dom-module is="x-test">
+    <template>
+        <style>
+            .content-wrapper ::content {
+                color: blue;
+            }
+
+            .content-wrapper[mobile-layout] ::content {
+                color: green;
+            }
+        </style>
+
+        <iron-media-query query="(max-width:768px)" query-matches="{{isMobilePhone}}"></iron-media-query>
+        <div class="content-wrapper" mobile-layout$="[[isMobilePhone]]">
+            <content></content>
+        </div>
+    </template>
+    <script>
+        Polymer({
+            is: 'x-test',
+            properties: {
+                isMobilePhone: Boolean
+            }
+        })
+    </script>
+</dom-module>
+</body>
+</html>
